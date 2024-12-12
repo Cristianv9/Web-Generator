@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>template6</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leading digital marketing agency specializing in SEO, content marketing, and social media management">
+    <title>DigitalEdge | Marketing Agency</title>
+    <link rel="stylesheet" href="agency-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- Custom Mouse Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <svg class="logo-animation" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="logo-circle"/>
+                <path d="M30 50 L70 50" class="logo-line"/>
+            </svg>
+            <div class="loading-text">LOADING</div>
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <svg class="logo" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45"/>
+                    <path d="M30 50 L70 50"/>
+                </svg>
+                <span class="logo-text">DigitalEdge</span>
+            </div>
+
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="animate-text">Transform</span>
+                <span class="animate-text">Your Digital</span>
+                <span class="animate-text">Presence</span>
+            </h1>
+            <p class="hero-subtitle">Strategic Digital Marketing Solutions for the Modern Era</p>
+            <div class="cta-container">
+                <a href="#contact" class="cta-button primary">Start Project</a>
+                <a href="#work" class="cta-button secondary">View Work</a>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="particles-container"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive Digital Solutions</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card" data-service="seo">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48">
+                        <!-- Add SVG path for SEO icon -->
+                    </svg>
+                </div>
+                <h3>Search Engine Optimization</h3>
+                <p>Drive organic traffic and improve search rankings with our data-driven SEO strategies.</p>
+                <ul class="service-features">
+                    <li>Keyword Research & Analysis</li>
+                    <li>On-Page Optimization</li>
+                    <li>Technical SEO</li>
+                    <li>Link Building</li>
+                </ul>
+                <a href="#" class="service-link">Learn More</a>
+            </div>
+
+            <div class="service-card" data-service="content">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48">
+                        <!-- Add SVG path for Content Marketing icon -->
+                    </svg>
+                </div>
+                <h3>Content Marketing</h3>
+                <p>Engage your audience with compelling content that converts.</p>
+                <ul class="service-features">
+                    <li>Content Strategy</li>
+                    <li>Blog Writing</li>
+                    <li>Video Production</li>
+                    <li>Infographics Design</li>
+                </ul>
+                <a href="#" class="service-link">Learn More</a>
+            </div>
+
+            <div class="service-card" data-service="social">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48">
+                        <!-- Add SVG path for Social Media icon -->
+                    </svg>
+                </div>
+                <h3>Social Media Marketing</h3>
+                <p>Build brand presence and engagement across social platforms.</p>
+                <ul class="service-features">
+                    <li>Platform Strategy</li>
+                    <li>Content Creation</li>
+                    <li>Community Management</li>
+                    <li>Paid Campaigns</li>
+                </ul>
+                <a href="#" class="service-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="section-header">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">Success Stories That Drive Results</p>
+        </div>
+
+        <div class="work-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="seo">SEO</button>
+            <button class="filter-btn" data-filter="content">Content</button>
+            <button class="filter-btn" data-filter="social">Social</button>
+        </div>
+
+        <div class="work-grid">
+            <article class="work-card" data-category="seo">
+                <div class="work-image">
+                    <img src="/api/placeholder/600/400" alt="Project 1" loading="lazy">
+                </div>
+                <div class="work-content">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project and its impact.</p>
+                    <div class="work-stats">
+                        <div class="stat">
+                            <span class="number">150%</span>
+                            <span class="label">Traffic Increase</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">200%</span>
+                            <span class="label">Conversion Rate</span>
+                        </div>
+                    </div>
+                    <button class="case-study-btn">View Case Study</button>
+                </div>
+            </article>
+            <!-- Add more work cards -->
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="section-header">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle">How We Deliver Success</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="timeline-item">
+                <div class="timeline-number">01</div>
+                <div class="timeline-content">
+                    <h3>Discovery</h3>
+                    <p>Understanding your business goals and target audience</p>
+                </div>
+            </div>
+            <!-- Add more timeline items -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2 class="section-title">Start a Project</h2>
+            <p class="section-subtitle">Let's Create Something Amazing Together</p>
+        </div>
+
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                        <div class="form-border"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                        <div class="form-border"></div>
+                    </div>
+                    <div class="form-group full-width">
+                        <select id="service" required>
+                            <option value="">Select Service</option>
+                            <option value="seo">SEO</option>
+                            <option value="content">Content Marketing</option>
+                            <option value="social">Social Media</option>
+                        </select>
+                        <div class="form-border"></div>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Project Details</label>
+                        <div class="form-border"></div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <svg class="footer-logo" viewBox="0 0 100 100">
+                    <!-- Add logo SVG -->
+                </svg>
+                <p>Transform your digital presence with data-driven strategies and creative solutions.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>email@digitaledge.com</li>
+                    <li>+1 (555) 123-4567</li>
+                    <li>123 Digital Street, Tech City</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="#" target="_blank" rel="noopener">Twitter</a>
+                    <a href="#" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DigitalEdge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="agency-script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>template2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDev Portfolio</title>
+    <link rel="stylesheet" href="game-style.css">
+</head>
+<body>
+    <!-- Pixel Art Background -->
+    <div class="pixel-bg"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="pixel-loader">
+            <div class="character"></div>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="loading-text">
+            LOADING...
+            <span class="progress-text">0%</span>
+        </div>
+    </div>
+
+    <!-- Game UI Style Navigation -->
+    <nav class="game-nav">
+        <div class="health-bar">
+            <div class="health-fill"></div>
+        </div>
+        <div class="menu-items">
+            <button class="menu-btn" data-section="home">HOME</button>
+            <button class="menu-btn" data-section="projects">PROJECTS</button>
+            <button class="menu-btn" data-section="skills">SKILLS</button>
+            <button class="menu-btn" data-section="contact">CONTACT</button>
+        </div>
+        <div class="inventory">
+            <button class="sound-toggle">🔊</button>
+            <button class="theme-toggle">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="glitch-container">
+            <h1 class="glitch-text" data-text="GAME DEVELOPER">GAME DEVELOPER</h1>
+        </div>
+        <div class="pixel-character">
+            <!-- Animated character sprite -->
+            <div class="character-sprite"></div>
+        </div>
+        <div class="stats-display">
+            <div class="stat">
+                <span class="label">Level</span>
+                <span class="value">5</span>
+            </div>
+            <div class="stat">
+                <span class="label">XP</span>
+                <span class="value">2435</span>
+            </div>
+            <div class="stat">
+                <span class="label">Projects</span>
+                <span class="value">12</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <article class="project-card" data-engine="unity">
+                <div class="project-preview">
+                    <img src="/api/placeholder/400/300" alt="Game Preview">
+                    <video class="gameplay-preview" loop muted>
+                        <source src="/api/placeholder/video" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-info">
+                    <h3>Project Title</h3>
+                    <div class="project-stats">
+                        <span class="engine">Unity</span>
+                        <span class="genre">Action RPG</span>
+                        <span class="status">Published</span>
+                    </div>
+                    <p>A brief description of the game and its key features.</p>
+                    <div class="project-links">
+                        <a href="#" class="play-btn">Play Demo</a>
+                        <a href="#" class="github-btn">Source Code</a>
+                    </div>
+                </div>
+            </article>
+            <!-- More project cards -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skill Tree</h2>
+        <div class="skill-tree">
+            <div class="skill-branch">
+                <h3>Game Engines</h3>
+                <div class="skill-nodes">
+                    <div class="skill-node" data-level="90">
+                        <div class="node-icon unity"></div>
+                        <div class="node-info">
+                            <span class="node-name">Unity</span>
+                            <div class="level-bar">
+                                <div class="level-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More skill nodes -->
+                </div>
+            </div>
+            <!-- More skill branches -->
+        </div>
+    </section>
+
+    <!-- Game Elements Section -->
+    <section id="game-elements" class="game-elements">
+        <h2 class="section-title">Game Elements</h2>
+        <div class="elements-grid">
+            <div class="element-card">
+                <div class="element-preview">
+                    <canvas class="sprite-preview"></canvas>
+                </div>
+                <div class="element-info">
+                    <h3>Character Design</h3>
+                    <p>Custom sprite animations and character development</p>
+                </div>
+            </div>
+            <!-- More element cards -->
+        </div>
+    </section>
+
+    <!-- Achievement Section -->
+    <section class="achievements">
+        <h2 class="section-title">Achievements Unlocked</h2>
+        <div class="achievement-grid">
+            <div class="achievement">
+                <div class="achievement-icon">🏆</div>
+                <div class="achievement-info">
+                    <h3>Master Developer</h3>
+                    <p>Completed 10+ Game Projects</p>
+                </div>
+            </div>
+            <!-- More achievements -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Quest Started: Contact Me</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Player Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Communication Scroll:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Quest Details:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    SEND MESSAGE
+                    <span class="btn-fx"></span>
+                </button>
+            </form>
+            <div class="contact-decoration">
+                <div class="pixel-chest"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="game-footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-btn">
+                    <span class="icon">🎮</span>
+                    Steam
+                </a>
+                <a href="#" class="social-btn">
+                    <span class="icon">🐙</span>
+                    GitHub
+                </a>
+                <a href="#" class="social-btn">
+                    <span class="icon">🎯</span>
+                    Itch.io
+                </a>
+            </div>
+            <p class="footer-text">Press Start to Continue © 2024</p>
+        </div>
+    </footer>
+
+    <script src="game-script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

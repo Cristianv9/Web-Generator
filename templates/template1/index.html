@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>template1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Artist Portfolio</title>
+    <link rel="stylesheet" href="3d-style.css">
+</head>
+<body>
+    <!-- 3D Scene Background -->
+    <canvas id="bg-scene"></canvas>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-container">
+            <div class="wireframe-cube">
+                <!-- Wireframe cube animation -->
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+            </div>
+            <div class="loading-text">
+                <span>Loading Assets</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">VERTEX</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle">
+                    <span class="toggle-icon"></span>
+                </button>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>3D Artist & Designer</h1>
+            <p>Creating immersive digital experiences</p>
+            <div class="reel-button">
+                <button class="play-reel">
+                    Watch Showreel
+                    <span class="button-icon">▶</span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-model">
+            <!-- 3D model viewer -->
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </header>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="project-grid">
+            <article class="project-card">
+                <div class="project-preview">
+                    <video class="preview-video" loop muted>
+                        <source src="/api/placeholder/video" type="video/mp4">
+                    </video>
+                    <div class="project-overlay">
+                        <h3>Project Title</h3>
+                        <p>3D Animation / Character Design</p>
+                        <button class="view-project">View Project</button>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="software-used">
+                        <span>Maya</span>
+                        <span>Blender</span>
+                        <span>Substance</span>
+                    </div>
+                </div>
+            </article>
+            <!-- More project cards -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category modeling">
+                <h3>3D Modeling</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Maya</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90"></div>
+                        </div>
+                    </div>
+                    <!-- More skill items -->
+                </div>
+            </div>
+            <!-- More skill categories -->
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <h2 class="section-title">Workflow</h2>
+        <div class="process-timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Concept</h3>
+                    <p>Initial sketches and concept development</p>
+                    <div class="process-preview">
+                        <img src="/api/placeholder/800/600" alt="Concept Art">
+                    </div>
+                </div>
+            </div>
+            <!-- More timeline items -->
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item" data-type="model">
+                <div class="model-viewer">
+                    <!-- 3D model viewer -->
+                    <canvas class="model-canvas"></canvas>
+                </div>
+                <div class="item-info">
+                    <h3>Model Name</h3>
+                    <p>Low-poly character design</p>
+                    <div class="model-controls">
+                        <button class="rotate-model">Rotate</button>
+                        <button class="view-wireframe">Wireframe</button>
+                    </div>
+                </div>
+            </div>
+            <!-- More gallery items -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-form-wrapper">
+                <h2>Start a Project</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <select id="project-type" required>
+                            <option value="">Select Project Type</option>
+                            <option value="character">Character Design</option>
+                            <option value="environment">Environment Design</option>
+                            <option value="animation">Animation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Project Details</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                        <span class="btn-line"></span>
+                    </button>
+                </form>
+            </div>
+            <div class="contact-model">
+                <!-- 3D contact decoration -->
+                <canvas id="contact-canvas"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>VERTEX</h3>
+                <p>3D Artist & Designer</p>
+            </div>
+            <div class="social-links">
+                <a href="#">ArtStation</a>
+                <a href="#">Behance</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VERTEX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="3d-script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

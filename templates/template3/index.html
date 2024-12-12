@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>template3</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoElite | Luxury Cars</title>
+    <link rel="stylesheet" href="auto-style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-screen">
+        <div class="loader">
+            <svg class="speedometer" viewBox="0 0 100 100">
+                <circle class="speedo-track" cx="50" cy="50" r="45"/>
+                <circle class="speedo-progress" cx="50" cy="50" r="45"/>
+            </svg>
+            <span class="loading-text">LOADING</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AutoElite</a>
+            <div class="nav-links">
+                <a href="#models">Models</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#configurator">Build</a>
+                <a href="#experience">Experience</a>
+            </div>
+            <button class="test-drive-btn">Book Test Drive</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="reveal-text">Experience Excellence</h1>
+            <p class="reveal-text delay-1">Discover our latest collection of luxury vehicles</p>
+        </div>
+        <div class="hero-car">
+            <div class="car-showcase">
+                <img src="/api/placeholder/1920/800" alt="Luxury Car" class="hero-image">
+                <div class="car-specs">
+                    <div class="spec">
+                        <span class="number">3.2</span>
+                        <span class="label">0-60 mph</span>
+                    </div>
+                    <div class="spec">
+                        <span class="number">625</span>
+                        <span class="label">Horsepower</span>
+                    </div>
+                    <div class="spec">
+                        <span class="number">205</span>
+                        <span class="label">Top Speed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Models Section -->
+    <section id="models" class="models">
+        <div class="section-header">
+            <h2>Our Models</h2>
+            <div class="model-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sedan">Sedan</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+        </div>
+        <div class="models-grid">
+            <div class="model-card" data-category="sports">
+                <div class="model-image">
+                    <img src="/api/placeholder/800/500" alt="Sports Car">
+                    <div class="model-overlay">
+                        <span class="view-details">View Details</span>
+                    </div>
+                </div>
+                <div class="model-info">
+                    <h3>GT Sport</h3>
+                    <p>Starting at $150,000</p>
+                    <div class="model-specs">
+                        <span>625 HP</span>
+                        <span>3.2s 0-60</span>
+                        <span>AWD</span>
+                    </div>
+                    <div class="model-actions">
+                        <button class="configure-btn">Configure</button>
+                        <button class="test-drive-btn">Test Drive</button>
+                    </div>
+                </div>
+            </div>
+            <!-- More model cards -->
+        </div>
+    </section>
+
+    <!-- Car Configurator -->
+    <section id="configurator" class="configurator">
+        <div class="config-header">
+            <h2>Build Your Dream Car</h2>
+        </div>
+        <div class="config-container">
+            <div class="car-display">
+                <div class="car-viewer">
+                    <img src="/api/placeholder/1200/600" alt="Configurable Car" class="config-car">
+                    <div class="view-controls">
+                        <button class="view-btn" data-view="front">Front</button>
+                        <button class="view-btn" data-view="side">Side</button>
+                        <button class="view-btn" data-view="rear">Rear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="config-options">
+                <div class="option-group">
+                    <h3>Exterior Color</h3>
+                    <div class="color-options">
+                        <button class="color-btn" data-color="black"></button>
+                        <button class="color-btn" data-color="silver"></button>
+                        <button class="color-btn" data-color="blue"></button>
+                        <button class="color-btn" data-color="red"></button>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h3>Wheels</h3>
+                    <div class="wheel-options">
+                        <!-- Wheel options -->
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h3>Interior</h3>
+                    <div class="interior-options">
+                        <!-- Interior options -->
+                    </div>
+                </div>
+                <div class="price-summary">
+                    <div class="base-price">
+                        <span>Base Price</span>
+                        <span>$150,000</span>
+                    </div>
+                    <div class="options-price">
+                        <span>Options</span>
+                        <span>$25,000</span>
+                    </div>
+                    <div class="total-price">
+                        <span>Total</span>
+                        <span>$175,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="experience-content">
+            <h2>The AutoElite Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24">
+                            <!-- Service icon -->
+                        </svg>
+                    </div>
+                    <h3>Premium Service</h3>
+                    <p>24/7 concierge and maintenance support</p>
+                </div>
+                <!-- More experience cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Visit Our Showroom</h2>
+                <address>
+                    123 Luxury Drive<br>
+                    Beverly Hills, CA 90210<br>
+                    +1 (555) 123-4567
+                </address>
+            </div>
+            <form class="test-drive-form">
+                <h3>Schedule a Test Drive</h3>
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <select id="model" required>
+                        <option value="">Select Model</option>
+                        <option value="gt-sport">GT Sport</option>
+                        <option value="luxury-sedan">Luxury Sedan</option>
+                        <option value="suv">Premium SUV</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Schedule Test Drive
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>AutoElite</h3>
+                <p>Luxury Automotive Excellence</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Models</h4>
+                    <a href="#">Sports</a>
+                    <a href="#">Sedan</a>
+                    <a href="#">SUV</a>
+                </div>
+                <div class="link-group">
+                    <h4>Services</h4>
+                    <a href="#">Test Drive</a>
+                    <a href="#">Financing</a>
+                    <a href="#">Service</a>
+                </div>
+                <div class="link-group">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoElite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="auto-script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

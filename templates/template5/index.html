@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>template5</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="portfolio-style.css">
+</head>
+<body>
+    <div class="grid-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a href="#" class="logo">PORTFOLIO</a>
+            <button class="menu-btn">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu-overlay">
+                <div class="menu-content">
+                    <ul class="menu-links">
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="menu-footer">
+                        <div class="social-links">
+                            <a href="#">Instagram</a>
+                            <a href="#">Dribbble</a>
+                            <a href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="reveal-text">Creative Developer</h1>
+            <p class="reveal-text delay-1">Crafting digital experiences through code and design</p>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="grid"></div>
+        </div>
+    </header>
+
+    <!-- Work Section -->
+    <section id="work" class="work-section">
+        <div class="section-header">
+            <h2>Selected Works</h2>
+        </div>
+        <div class="work-grid">
+            <article class="work-item" data-category="web">
+                <div class="work-image">
+                    <img src="/api/placeholder/800/600" alt="Project 1">
+                </div>
+                <div class="work-info">
+                    <h3>Project One</h3>
+                    <p>Web Development</p>
+                    <a href="#" class="work-link">View Project</a>
+                </div>
+            </article>
+            <article class="work-item" data-category="design">
+                <div class="work-image">
+                    <img src="/api/placeholder/800/600" alt="Project 2">
+                </div>
+                <div class="work-info">
+                    <h3>Project Two</h3>
+                    <p>UI Design</p>
+                    <a href="#" class="work-link">View Project</a>
+                </div>
+            </article>
+            <article class="work-item" data-category="branding">
+                <div class="work-image">
+                    <img src="/api/placeholder/800/600" alt="Project 3">
+                </div>
+                <div class="work-info">
+                    <h3>Project Three</h3>
+                    <p>Brand Design</p>
+                    <a href="#" class="work-link">View Project</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm a creative developer with a passion for building beautiful, functional websites and applications. With expertise in both design and development, I create seamless digital experiences.</p>
+            </div>
+            <div class="about-image">
+                <img src="/api/placeholder/400/600" alt="Profile">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Development</h3>
+                <ul class="skill-list">
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Design</h3>
+                <ul class="skill-list">
+                    <li>UI/UX Design</li>
+                    <li>Figma</li>
+                    <li>Adobe Creative Suite</li>
+                    <li>Motion Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-content">
+            <h2>Let's Work Together</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>Have a project in mind? Let's create something amazing together.</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@example.com" class="email-link">hello@example.com</a>
+                        <div class="social-links">
+                            <a href="#" target="_blank">Instagram</a>
+                            <a href="#" target="_blank">LinkedIn</a>
+                            <a href="#" target="_blank">Dribbble</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <div class="btn-line"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Your Name. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="portfolio-script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

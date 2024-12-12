@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>template9</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Agency Portfolio</title>
+    <link rel="stylesheet" href="agency-style.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader">
+            <span>LOADING</span>
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="nav-container">
+            <div class="brand">AGENCY</div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </button>
+            <div class="nav-overlay">
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="split-text">We Create Digital Experiences</h1>
+                <p class="fade-in">Brand Strategy • Web Design • Development</p>
+                <div class="cta-container">
+                    <a href="#works" class="cta-button">View Our Work</a>
+                    <div class="scroll-indicator">
+                        <span>Scroll</span>
+                        <div class="scroll-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="background-shape"></div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <h2 class="section-title">Selected Works</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <h3>Project Name</h3>
+                            <p>Branding / Web Design</p>
+                            <a href="#" class="view-project">View Case Study</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <h3>Project Name</h3>
+                            <p>Digital Marketing</p>
+                            <a href="#" class="view-project">View Case Study</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder"></div>
+                        <div class="project-overlay">
+                            <h3>Project Name</h3>
+                            <p>Web Development</p>
+                            <a href="#" class="view-project">View Case Study</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <circle cx="12" cy="12" r="10" />
+                        </svg>
+                    </div>
+                    <h3>Brand Strategy</h3>
+                    <p>We help define your brand's voice, vision, and values.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <rect x="2" y="2" width="20" height="20" />
+                        </svg>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Creating beautiful, functional digital experiences.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <polygon points="12 2 2 22 22 22" />
+                        </svg>
+                    </div>
+                    <h3>Development</h3>
+                    <p>Bringing designs to life with clean, efficient code.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <h2 class="section-title">Start a Project</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="message" required></textarea>
+                            <label for="message">Project Details</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span>Send Message</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>AGENCY</h3>
+                <p>Creating digital experiences that matter.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Behance</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Creative Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="agency-script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

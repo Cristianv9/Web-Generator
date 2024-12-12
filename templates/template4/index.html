@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>template4</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE | Fashion House</title>
+    <link rel="stylesheet" href="luxe-style.css">
+</head>
+<body>
+    <!-- Magnetic Cursor -->
+    <div class="magnetic-cursor"></div>
+    
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <div class="transition-logo">LUXE</div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">LUXE</a>
+            <div class="nav-center">
+                <a href="#collections">Collections</a>
+                <a href="#runway">Runway</a>
+                <a href="#boutique">Boutique</a>
+                <a href="#about">About</a>
+            </div>
+            <button class="cart-toggle">
+                Cart <span class="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>SS24 Collection</h1>
+                <p>Elegance Redefined</p>
+            </div>
+            <div class="hero-images">
+                <div class="image-reveal">
+                    <img src="/api/placeholder/800/1200" alt="Fashion Model 1">
+                </div>
+                <div class="image-reveal delayed">
+                    <img src="/api/placeholder/800/1200" alt="Fashion Model 2">
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to Explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Gallery -->
+    <section id="collections" class="collections">
+        <div class="section-header">
+            <h2>Latest Collections</h2>
+            <p>Discover our curated pieces</p>
+        </div>
+        <div class="collection-grid">
+            <div class="collection-item large">
+                <img src="/api/placeholder/1200/800" alt="Collection 1">
+                <div class="collection-info">
+                    <h3>Evening Wear</h3>
+                    <p>Timeless Elegance</p>
+                    <a href="#" class="view-collection">Explore Collection</a>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="/api/placeholder/800/1200" alt="Collection 2">
+                <div class="collection-info">
+                    <h3>Daywear</h3>
+                    <p>Modern Sophistication</p>
+                    <a href="#" class="view-collection">Explore Collection</a>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="/api/placeholder/800/1200" alt="Collection 3">
+                <div class="collection-info">
+                    <h3>Accessories</h3>
+                    <p>Finishing Touches</p>
+                    <a href="#" class="view-collection">Explore Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Runway Section -->
+    <section id="runway" class="runway">
+        <div class="runway-slider">
+            <div class="slider-track">
+                <div class="slide">
+                    <video autoplay muted loop playsinline>
+                        <source src="/api/placeholder/video" type="video/mp4">
+                    </video>
+                    <div class="slide-content">
+                        <h3>Paris Fashion Week</h3>
+                        <p>Spring/Summer 2024</p>
+                    </div>
+                </div>
+                <!-- More slides -->
+            </div>
+            <div class="slider-nav">
+                <button class="prev">Previous</button>
+                <div class="slider-progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <button class="next">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boutique Section -->
+    <section id="boutique" class="boutique">
+        <div class="boutique-grid">
+            <div class="featured-item">
+                <img src="/api/placeholder/600/800" alt="Featured Product">
+                <div class="item-details">
+                    <h3>Silk Evening Gown</h3>
+                    <p>Handcrafted in Italy</p>
+                    <span class="price">$2,890</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- More items -->
+        </div>
+        <div class="boutique-nav">
+            <button class="category-filter active" data-category="all">All</button>
+            <button class="category-filter" data-category="dresses">Dresses</button>
+            <button class="category-filter" data-category="accessories">Accessories</button>
+            <button class="category-filter" data-category="shoes">Shoes</button>
+        </div>
+    </section>
+
+    <!-- Atelier Section -->
+    <section id="about" class="atelier">
+        <div class="atelier-content">
+            <div class="atelier-text">
+                <h2>The Atelier</h2>
+                <p>Crafting luxury since 1990, our atelier combines traditional craftsmanship with contemporary design.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="atelier-image">
+                <img src="/api/placeholder/800/1200" alt="Atelier">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <div class="contact-info">
+                <h2>Visit Our Boutique</h2>
+                <address>
+                    123 Fashion Avenue<br>
+                    Paris, France<br>
+                    +33 1 23 45 67 89
+                </address>
+            </div>
+            <form class="appointment-form">
+                <h3>Book an Appointment</h3>
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="date" required>
+                    <label for="date">Preferred Date</label>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Book Appointment
+                    <span class="btn-line"></span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>LUXE</h4>
+                <p>Luxury Fashion House</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h5>Collections</h5>
+                    <a href="#">Spring/Summer 24</a>
+                    <a href="#">Fall/Winter 23</a>
+                    <a href="#">Archives</a>
+                </div>
+                <div class="link-column">
+                    <h5>Client Services</h5>
+                    <a href="#">Book Appointment</a>
+                    <a href="#">Care Guide</a>
+                    <a href="#">Shipping</a>
+                </div>
+                <div class="link-column">
+                    <h5>Connect</h5>
+                    <a href="#">Instagram</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LUXE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="luxe-script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

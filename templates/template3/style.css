@@ -1,0 +1,300 @@
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #e31837;
+    --text-color: #ffffff;
+    --bg-color: #0a0a0a;
+    --accent-color: #ffd700;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-color);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speedometer {
+    width: 80px;
+    height: 80px;
+    transform: rotate(-90deg);
+}
+
+.speedo-track,
+.speedo-progress {
+    fill: none;
+    stroke-width: 4;
+}
+
+.speedo-track {
+    stroke: rgba(255,255,255,0.1);
+}
+
+.speedo-progress {
+    stroke: var(--secondary-color);
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    animation: progress 2s ease forwards;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    z-index: 100;
+    transition: var(--transition);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.hero-car {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+}
+
+.car-specs {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    display: flex;
+    gap: 4rem;
+}
+
+.spec {
+    text-align: center;
+}
+
+.spec .number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.spec .label {
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
+
+/* Models Section */
+.models {
+    padding: 10rem 2rem;
+}
+
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.model-card {
+    position: relative;
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.model-card:hover {
+    transform: translateY(-10px);
+}
+
+.model-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.model-card:hover .model-image img {
+    transform: scale(1.1);
+}
+
+/* Configurator */
+.configurator {
+    padding: 10rem 2rem;
+    background: #1e1e1e;
+}
+
+.config-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.car-viewer {
+    position: relative;
+    height: 600px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.config-options {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.color-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Form */
+.contact {
+    padding: 10rem 2rem;
+}
+
+.test-drive-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+/* Animations */
+@keyframes progress {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .config-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .car-specs {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

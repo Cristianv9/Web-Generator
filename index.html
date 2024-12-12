@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Custom Layout Generator</h1>
+    </header>
+    
+    <main>
+        <section id="template-selector">
+            <h2>Select a Template</h2>
+            <select id="template-dropdown">
+                <option value="" disabled selected>Choose a template</option>
+                <option value="templates/template1/index.html">Template 1</option>
+                <option value="templates/template2/index.html">Template 2</option>
+                <option value="templates/template3/index.html">Template 3</option>
+                <option value="templates/template4/index.html">Template 4</option>
+                <option value="templates/template5/index.html">Template 5</option>
+                <option value="templates/template6/index.html">Template 6</option>
+                <option value="templates/template7/index.html">Template 7</option>
+                <option value="templates/template8/index.html">Template 8</option>
+                <option value="templates/template9/index.html">Template 9</option>
+                <option value="templates/template10/index.html">Template 10</option>
+            </select>
+            <button id="load-template">Load Template</button>
+        </section>
+
+        <section id="template-preview">
+            <h2>Template Preview</h2>
+            <iframe id="preview-frame" src="" title="Template Preview" style="width: 100%; height: 600px; border: 1px solid #ccc;"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Layout Generator. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("load-template").addEventListener("click", function () {
+            const dropdown = document.getElementById("template-dropdown");
+            const selectedTemplate = dropdown.value;
+
+            if (selectedTemplate) {
+                // Set the iframe's source to the selected template
+                const iframe = document.getElementById("preview-frame");
+                iframe.src = selectedTemplate;
+            } else {
+                alert("Please select a template!");
+            }
+        });
+    </script>
+</body>
+</html>

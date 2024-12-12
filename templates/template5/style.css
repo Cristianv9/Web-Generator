@@ -1,0 +1,323 @@
+:root {
+    --primary-color: #0f0f0f;
+    --accent-color: #64ffda;
+    --text-color: #ffffff;
+    --bg-color: #0f0f0f;
+    --grid-color: rgba(255, 255, 255, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --spacing: clamp(2rem, 5vw, 4rem);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Grid Cursor */
+.grid-cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent-color);
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    letter-spacing: 0.2em;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 101;
+}
+
+.menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text-color);
+    position: absolute;
+    transition: var(--transition);
+}
+
+.menu-btn span:first-child {
+    top: 0;
+}
+
+.menu-btn span:last-child {
+    bottom: 0;
+}
+
+.menu-btn.active span:first-child {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-btn.active span:last-child {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    clip-path: circle(0% at top right);
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 100;
+}
+
+.menu-overlay.active {
+    clip-path: circle(150% at top right);
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+}
+
+.menu-links {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-links li {
+    margin: 2rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.menu-overlay.active .menu-links li {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.menu-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.reveal-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grid {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.2;
+}
+
+/* Work Section */
+.work-section {
+    padding: var(--spacing);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.work-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.work-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.work-item:hover .work-info {
+    transform: translateY(0);
+}
+
+.work-item:hover .work-image img {
+    transform: scale(1.1);
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 4rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.5);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.form-group textarea ~ label {
+    top: 1rem;
+    transform: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    background: var(--bg-color);
+    padding: 0 0.5rem;
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-links a {
+        font-size: 2rem;
+    }
+    
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
